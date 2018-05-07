@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
 
- messages ;
-  constructor(private messageService : MessagesService) { 
-    this.messages = messageService.messages;
+
+  constructor(private messageService: MessagesService) {
   }
 
   ngOnInit() {
-   
+  }
+  onClick() {
+    this.messageService.messages = [];
   }
 
 }
