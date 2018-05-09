@@ -1,0 +1,13 @@
+<label for="search">Hero name</label>
+<input id="search" #heroName (keyup)="search(heroName.value)">
+<button (click)="search(heroName.value)">Search</button>
+<ul class="search-result">
+  <li
+   *ngFor="let hero of this.heroesObservable$ | async"  >
+   <a routerLink="/detail/{{hero.id}}">
+  
+   {{hero.name}}
+  </a>
+ 
+  </li>
+</ul>
